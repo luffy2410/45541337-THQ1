@@ -2,16 +2,18 @@ Github username: luffy2410
 Name of repository: 45541337-THQ1
 File name: 45541337-THQ1.R
 
-#Q1
+#Question1
 e=2.7183
 Coupon=C
 Face value=F
 The number of coupon payments=n
-j=seq(0.5,n,by=0.5)
+#coupon C is paid every 6 months 
+tn=n/2
+tj=seq(0.5,tn,by=0.5)
 y=c(y(0.5),y(1),y(1.5),...,y(tn))
-P=sum(C*e^-(y*j))+F*e^-(y(tn)*n)
+P=sum(C*e^-(y*tj))+F*e^-(y(tn)*tn)
 
-#Q3
+#Question3
 (a)
 dataset=read.csv(file.choose())
 
