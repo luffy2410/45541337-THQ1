@@ -26,14 +26,14 @@ plot(dataset$time,dataset$gdp,main = "Singapore GDP growth",xlab = "Time",ylab =
 
 (d)
 #period1
-mg1=mean(dataset$gdp[1:36])
-sd1=sd(dataset$gdp[1:36])
+mg1=mean(subset(dataset,period==1)$gdp)
+sd1=sd(subset(dataset,period==1)$gdp)
 #period2
-mg2=mean(dataset$gdp[37:72])
-sd2=sd(dataset$gdp[37:72])
+mg2=mean(subset(dataset,period==2)$gdp)
+sd2=sd(subset(dataset,period==2)$gdp)
 #period3
-mg3=mean(dataset$gdp[73:110])
-sd3=sd(dataset$gdp[73:110])
+mg3=mean(subset(dataset,period==3)$gdp)
+sd3=sd(subset(dataset,period==3)$gdp)
 #create data table
 statistics=c("mean gdp","sd gdp")
 period1=c(mg1,sd1)
